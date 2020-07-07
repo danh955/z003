@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="HilresStock.Views.ShellPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HilresStock.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    xmlns:sys="using:System"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!-- https://stackoverflow.com/questions/51583742/how-do-i-set-a-tag-attribute-to-a-typeofpage-in-xaml-for-uwp-application -->
+    <Page.Resources>
+        <local:ChartPage x:Key="ChartPage" />
+    </Page.Resources>
+
+    <winui:NavigationView x:Name="ShellNavigation">
+        <winui:NavigationView.MenuItems>
+            <winui:NavigationViewItem Icon="FourBars" Content="Chart" Tag="{StaticResource ChartPage}" />
+        </winui:NavigationView.MenuItems>
+        <Frame x:Name="contentFrame"/>
+    </winui:NavigationView>
+</Page>

@@ -1,8 +1,8 @@
-﻿// <copyright file="MainPage.xaml.cs" company="Hilres">
+﻿// <copyright file="ChartPage.xaml.cs" company="Hilres">
 // Copyright (c) Hilres. All rights reserved.
 // </copyright>
 
-namespace HilresStock
+namespace HilresStock.Views
 {
     using Windows.UI.Xaml.Controls;
 
@@ -10,12 +10,12 @@ namespace HilresStock
     /// Main page class.
     /// The Blank Page item template is documented at <!-- https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 -->.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class ChartPage : Page
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MainPage"/> class.
+        /// Initializes a new instance of the <see cref="ChartPage"/> class.
         /// </summary>
-        public MainPage()
+        public ChartPage()
         {
             this.InitializeComponent();
         }
