@@ -32,8 +32,7 @@ namespace HilresStock.Views
         {
             if (args.IsSettingsSelected)
             {
-                //// TODO: Create setting page.
-                //// this.contentFrame.Navigate(typeof(SettingsPage));
+                this.contentFrame.Navigate(typeof(SettingsPage));
                 return;
             }
 
