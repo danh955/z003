@@ -19,8 +19,8 @@ namespace HilresStock.Views
         public ShellPage()
         {
             this.InitializeComponent();
+            this.shellNavigation.SelectionChanged += this.ShellNavigation_SelectionChanged;
             this.contentFrame.Navigate(typeof(Views.ChartPage));
-            this.ShellNavigation.SelectionChanged += this.ShellNavigation_SelectionChanged;
         }
 
         /// <summary>

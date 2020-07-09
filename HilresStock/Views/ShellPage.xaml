@@ -15,10 +15,10 @@
         <local:ChartPage x:Key="ChartPage" />
     </Page.Resources>
 
-    <winui:NavigationView x:Name="ShellNavigation">
+    <winui:NavigationView x:Name="shellNavigation" PaneDisplayMode="LeftCompact" IsBackButtonVisible="Collapsed">
         <winui:NavigationView.MenuItems>
             <winui:NavigationViewItem Icon="FourBars" Content="Chart" Tag="{StaticResource ChartPage}" />
         </winui:NavigationView.MenuItems>
-        <Frame x:Name="contentFrame"/>
+        <Frame x:Name="contentFrame" />
     </winui:NavigationView>
 </Page>
