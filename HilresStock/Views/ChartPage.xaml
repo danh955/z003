@@ -6,28 +6,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:ChartControls="using:HilresStock.Views.Chart"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <!-- Top bar -->
-        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Padding="5" Background="LightGray" BorderThickness="1,0,0,1" BorderBrush="Gray">
-            <TextBlock Text="Chart page" />
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="LightGray" BorderThickness="1,0,0,1" BorderBrush="Gray">
+            <TextBlock Text="Chart page and other stuff." Padding="5" />
         </Grid>
         <!-- Left column -->
-        <Grid Grid.Column="0" Grid.Row="1" Padding="5" Background="Honeydew" BorderThickness="1,0,1,0" BorderBrush="Gray" Height="Auto">
-            <TextBlock Text="Left side." />
+        <Grid Grid.Row="1" Grid.Column="0" Background="Honeydew" BorderThickness="1,0,1,0" BorderBrush="Gray">
+            <ChartControls:StockListControl />
         </Grid>
         <!-- Right area -->
-        <Grid Grid.Column="1" Grid.Row="1" Height="Auto" Padding="5">
-            <TextBlock Text="Right side." />
+        <Grid Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Right side." Padding="5" />
         </Grid>
     </Grid>
 </Page>
