@@ -5,6 +5,7 @@
 namespace HilresStock.Views.Chart
 {
     using System.Collections.Generic;
+    using System.Globalization;
     using Windows.UI.Xaml.Controls;
 
     /// <summary>
@@ -20,17 +21,12 @@ namespace HilresStock.Views.Chart
             this.InitializeComponent();
             var stocks = new List<Stock>();
 
-            for (int i = 1; i < 25; i++)
+            for (int i = 1; i < 30; i++)
             {
-                stocks.Add(new Stock { Id = i, Symbol = i.ToString() });
+                stocks.Add(new Stock { Id = i, Symbol = i.ToString(CultureInfo.InvariantCulture) });
             }
 
-            this.Stocks = stocks;
+            this.DataGrid.ItemsSource = stocks;
         }
-
-        /// <summary>
-        /// Gets list of stocks.
-        /// </summary>
-        public List<Stock> Stocks { get; }
     }
 }
