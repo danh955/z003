@@ -10,8 +10,6 @@
     d:DesignHeight="200"
     d:DesignWidth="100">
 
-    <ScrollViewer>
-        <telerikGrid:RadDataGrid x:Name="DataGrid"
-                                 UserGroupMode="Disabled" />
-    </ScrollViewer>
+    <telerikGrid:RadDataGrid x:Name="DataGrid"
+                             UserGroupMode="Disabled" />
 </UserControl>
